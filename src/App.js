@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ThemeToggle from "./components/theme/ThemeToggle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div id="app">
+      <ThemeToggle />
+      <article>
+        <h2 style={{ color: "var(--secondary-color)" }}>React Course</h2>
+        <p style={{ color: "var(--text-color)" }}>
+          A course that teaches you React from the ground up and in great depth!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </article>
     </div>
   );
 }
