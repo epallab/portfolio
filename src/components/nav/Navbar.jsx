@@ -76,6 +76,14 @@ const Navbar = () => {
           Contact Me
         </NavLink>
         <ThemeToggle />
+        <div>
+          <label className="burger" for="burger">
+            <input name="burger" type="checkbox" id="burger" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
       </div>
     </div>
   );
