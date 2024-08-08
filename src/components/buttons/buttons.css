@@ -1,0 +1,11 @@
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+}

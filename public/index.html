@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0077ff" />
+    <meta name="theme-color" content="#253036" />
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -39,5 +39,40 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      // Function to update the theme-color meta tag based on the theme
+      function updateThemeColor(theme) {
+        const themeColorMeta = document.getElementById("theme-color-meta");
+        if (theme === "dark") {
+          themeColorMeta.setAttribute("content", "#253036");
+        } else {
+          themeColorMeta.setAttribute("content", "#ffffff"); // Light theme color
+        }
+      }
+
+      // Initially set the theme color based on the current theme
+      const currentTheme = localStorage.getItem("theme") || "light";
+      updateThemeColor(currentTheme);
+
+      // Listen for changes in theme
+      document.addEventListener("themeChange", (event) => {
+        updateThemeColor(event.detail.theme);
+        console.log(event.detail.theme);
+      });
+
+      // Example theme toggle function (you might already have this)
+      function toggleTheme() {
+        const theme =
+          localStorage.getItem("theme") === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", theme);
+        document.documentElement.setAttribute("data-theme", theme);
+
+        // Dispatch custom event to notify about the theme change
+        const event = new CustomEvent("themeChange", {
+          detail: { theme },
+        });
+        document.dispatchEvent(event);
+      }
+    </script>
   </body>
 </html>
