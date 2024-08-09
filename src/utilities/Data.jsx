@@ -1,3 +1,14 @@
+import ex from "../assets/express.webp";
+import figma from "../assets/figma.png";
+import git from "../assets/git.png";
+import jslogo from "../assets/jslogo.png";
+import mongo from "../assets/mongo.png";
+import node from "../assets/node.png";
+import pgSql from "../assets/pgSql.png";
+import react from "../assets/react.png";
+import tailwind from "../assets/tailwind.png";
+import next from "../assets/next.svg";
+
 export const navLinks = [
   {
     id: "nav-links-home",
@@ -45,3 +56,56 @@ export const personalDetails = {
   role: "Fullstack Developer",
   tech: "MERN Stack",
 };
+
+export const skils = [
+  {
+    label: "JavaScript",
+    logo: jslogo,
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    label: "React Js",
+    logo: react,
+    url: "https://react.dev/",
+  },
+  {
+    label: "Next Js",
+    logo: next,
+    url: "https://react.dev/",
+  },
+  {
+    label: "Node JS",
+    logo: node,
+    url: "https://nextjs.org/",
+  },
+  {
+    label: "Express JS",
+    logo: ex,
+    url: "https://expressjs.com/",
+  },
+  {
+    label: "MongoDB",
+    logo: mongo,
+    url: "https://www.mongodb.com/docs/",
+  },
+  {
+    label: "PostgreSQL",
+    logo: pgSql,
+    url: "https://www.postgresql.org/docs/",
+  },
+  {
+    label: "Tailwind CSS",
+    logo: tailwind,
+    url: "https://tailwindcss.com/",
+  },
+  {
+    label: "Figma",
+    logo: figma,
+    url: "https://www.figma.com/",
+  },
+  {
+    label: "Git",
+    logo: git,
+    url: "https://git-scm.com/doc",
+  },
+];

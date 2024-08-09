@@ -40,6 +40,33 @@
   gap: 30px;
   margin-top: 20px;
 }
+.tech-container {
+  display: flex;
+  padding: 20px 10%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: var(--gray-color);
+}
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.skills-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.skills-card p {
+  color: var(--primary-color);
+  margin-top: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   .home-main {
     /* height: calc(120dvh - 70px); */

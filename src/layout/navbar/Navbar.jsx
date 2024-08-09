@@ -63,9 +63,16 @@ const Navbar = ({ activeSection, handleScroll }) => {
             </button>
           ))}
           <ThemeToggle />
-          <div style={{ margin: "0px 10px", fontSize: ".9em" }}>
-            <PrimaryBtn name={"Download CV"} padding={"6px 15px"} />
-          </div>
+          {activeSection !== "home" && (
+            <div style={{ margin: "0px 10px", fontSize: ".9em" }}>
+              <PrimaryBtn
+                name={"Download CV"}
+                padding={"6px 15px"}
+                bgColor={"var(--secondary-color)"}
+                color={"white"}
+              />
+            </div>
+          )}
         </div>
         <div className="mob-nav-toggle">
           <label className="burger" htmlFor="burger">

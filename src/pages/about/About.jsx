@@ -1,9 +1,15 @@
 import React from "react";
+import "./About.css";
+import "../home/Home.css";
+import dp from "../../assets/dp.png";
 
 const About = () => {
   return (
-    <div name="about" id="about" style={{ height: "150vh" }}>
-      About
+    <div className="about-main">
+      <div className="about-left">
+        <img className="profile-img" src={dp} alt="" />
+      </div>
+      <div className="about-right"></div>
     </div>
   );
 };
