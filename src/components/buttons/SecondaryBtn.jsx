@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./buttons.css";
 
-const PrimaryBtn = (props) => {
+const SecondaryBtn = (props) => {
   return (
     <button
       style={{
@@ -11,7 +11,7 @@ const PrimaryBtn = (props) => {
         color: props?.color,
         border: props?.border,
       }}
-      className="primary-btn"
+      className="secondary-btn"
     >
       {props?.name}
       {props?.logo && <div className="btn-logo">{props?.logo}</div>}
@@ -19,12 +19,12 @@ const PrimaryBtn = (props) => {
   );
 };
 
-PrimaryBtn.propTypes = {
+SecondaryBtn.propTypes = {
   name: PropTypes.string.isRequired,
   padding: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
   border: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
 };
-export default PrimaryBtn;
+export default SecondaryBtn;

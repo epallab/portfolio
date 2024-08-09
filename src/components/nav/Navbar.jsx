@@ -32,7 +32,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           spy={true}
-          offset={-60}
+          // offset={-60}
           hashSpy={true}
           isDynamic={true}
         >
@@ -49,6 +49,7 @@ const Navbar = () => {
                 margin: "0px",
                 padding: "0px",
                 color: "var(--secondary-color)",
+                transition: "all 0.3s ease-in-out",
               }}
             >
               {" <PB/>"}
@@ -139,6 +140,7 @@ const Navbar = () => {
                       fontSize: ".9em",
                       fontWeight: 500,
                       color: "var(--primary-color)",
+                      transition: "all 0.3s ease-in-out",
                     }}
                   >
                     Switch Theme
@@ -146,7 +148,12 @@ const Navbar = () => {
                   <ThemeToggle />
                 </div>
                 <div style={{ margin: "10px 0px" }}>
-                  <PrimaryBtn name={"Download CV"} padding={"8px 0px"} />
+                  <PrimaryBtn
+                    name={"Download CV"}
+                    padding={"8px 0px"}
+                    bgColor={"var(--primary-color)"}
+                    color={"var(--background-color)"}
+                  />
                 </div>
               </div>
             </motion.div>

@@ -8,6 +8,23 @@ body {
   background-color: var(--background-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -21,6 +38,7 @@ code {
   --accent-color: #ffb400;
   --background-color: #ffffff;
   --text-color: #222222;
+  --text-color-gray: #474747;
   --gray-color: #e9e9e9;
 }
 
@@ -28,6 +46,7 @@ code {
 [data-theme="dark"] {
   --primary-color: #ffffff;
   --text-color: #ffffff;
+  --text-color-gray: #ababab;
   --overlay-color: #161c2058;
   --secondary-color: #0077ff;
   --secondary-bg-color: #26373f;
