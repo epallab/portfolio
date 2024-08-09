@@ -16,7 +16,7 @@ const Home = () => {
           </h4>
           <h1 className="home-h1">Hi I'm</h1>
           <h1 className="home-h1" style={{ color: "var(--secondary-color)" }}>
-            {personalDetails?.name}
+            {personalDetails?.name} 👋
           </h1>
           <h1 className="home-h1">{personalDetails?.role}</h1>
           <h2 style={{ color: "var(--secondary-color)" }}>

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import ThemeToggle from "../theme/ThemeToggle";
+import ThemeToggle from "../../components/theme/ThemeToggle";
 import { Link } from "react-scroll";
 import { FaCodeMerge } from "react-icons/fa6";
 import { navLinks } from "../../utilities/Data";
 import { AnimatePresence, motion } from "framer-motion";
-import PrimaryBtn from "./../buttons/PrimaryBtn";
+import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 
-const Navbar = () => {
+const Navbar = ({ activeSection, handleScroll }) => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
     setToggle(!toggle);
@@ -27,15 +27,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar-main">
-        <Link
-          to="home"
-          smooth={true}
-          duration={500}
-          spy={true}
-          // offset={-60}
-          hashSpy={true}
-          isDynamic={true}
-        >
+        <button className="brand-btn" onClick={() => handleScroll("home")}>
           <div className="brand d-flex">
             <span
               className="d-flex"
@@ -55,23 +47,20 @@ const Navbar = () => {
               {" <PB/>"}
             </h4>
           </div>
-        </Link>
+        </button>
         <div className="nav-link">
           {navLinks?.map((item, id) => (
-            <Link
+            <button
               key={item?.id}
-              to={item?.to}
-              smooth={true}
-              duration={500}
-              spy={true}
-              offset={-60}
-              hashSpy={true}
-              isDynamic={true}
-              activeClass="nav-btns-active"
-              className="nav-btns"
+              className={
+                activeSection === item?.to
+                  ? "nav-btns nav-btns-active "
+                  : "nav-btns"
+              }
+              onClick={() => handleScroll(item?.to)}
             >
               {item?.name}
-            </Link>
+            </button>
           ))}
           <ThemeToggle />
           <div style={{ margin: "0px 10px", fontSize: ".9em" }}>
@@ -111,21 +100,20 @@ const Navbar = () => {
             >
               <div className="nav-link-mobile">
                 {navLinks?.map((item) => (
-                  <Link
+                  <button
                     key={item?.id}
-                    to={item?.to}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    offset={-60}
-                    hashSpy={true}
-                    isDynamic={true}
-                    activeClass="nav-btns-active"
-                    className="nav-btns"
-                    onClick={() => setToggle(false)} // Close menu on click
+                    className={
+                      activeSection === item?.to
+                        ? "nav-btns nav-btns-active "
+                        : "nav-btns"
+                    }
+                    onClick={() => {
+                      handleScroll(item?.to);
+                      setToggle(false);
+                    }}
                   >
                     {item?.name}
-                  </Link>
+                  </button>
                 ))}
                 <div className="bar"></div>
                 <div

@@ -9,7 +9,10 @@
   top: 0;
   left: 0;
   background-color: var(--background-color);
-  /*  */
+}
+.brand-btn {
+  border: none;
+  background-color: var(--background-color);
 }
 .brand {
   gap: 5px;
@@ -24,6 +27,8 @@
 }
 
 .nav-btns {
+  border: none;
+  background-color: var(--background-color);
   color: var(--primary-color);
   font-family: inherit;
   font-weight: 500;
@@ -37,7 +42,6 @@
 
 .nav-btns-active {
   color: var(--secondary-color);
-  /*  */
 }
 
 .burger {
@@ -114,6 +118,11 @@
   .nav-link {
     display: none;
   }
+  .nav-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .overlay {
     position: fixed;
     z-index: 20;
@@ -127,14 +136,12 @@
     justify-content: flex-end;
     background-color: var(--overlay-color);
     backdrop-filter: blur(2px);
-    /*  */
   }
   .modal {
     width: 70dvw;
     height: 100dvh;
     background-color: var(--background-color);
     padding: 70px 20px;
-    /*  */
   }
   .nav-link-mobile {
     display: flex;
@@ -145,6 +152,5 @@
   .bar {
     height: 2px;
     background-color: var(--gray-color);
-    /*  */
   }
 }
