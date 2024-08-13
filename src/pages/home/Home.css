@@ -17,10 +17,9 @@
 }
 
 .profile-img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 300px;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 .home-details {
   width: 80%;

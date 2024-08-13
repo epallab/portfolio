@@ -136,6 +136,7 @@
     justify-content: flex-end;
     background-color: var(--overlay-color);
     backdrop-filter: blur(2px);
+    overflow-y: auto;
   }
   .modal {
     width: 70dvw;
