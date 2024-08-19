@@ -7,7 +7,9 @@ const Tech = () => {
     <>
       {skils?.map((item) => (
         <div className="skills-card" key={item?.url}>
-          <img src={item.logo} alt="" />
+          <a href={item?.url} target="_blank" rel="noreferrer">
+            <img src={item.logo} alt="" />
+          </a>
           <p>{item?.label}</p>
         </div>
       ))}

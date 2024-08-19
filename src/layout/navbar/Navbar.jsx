@@ -70,6 +70,7 @@ const Navbar = ({ activeSection, handleScroll }) => {
                 padding={"6px 15px"}
                 bgColor={"var(--secondary-color)"}
                 color={"white"}
+                onClick={() => window?.open("/files/resume.pdf", "_blank")}
               />
             </div>
           )}

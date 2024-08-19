@@ -42,6 +42,7 @@ const Home = () => {
                 color={"var(--secondary-color)"}
                 border={"1.5px solid var(--secondary-color) "}
                 logo={<FiDownload />}
+                onClick={() => window?.open("/files/resume.pdf", "_blank")}
               />
             </div>
           </div>
@@ -50,8 +51,23 @@ const Home = () => {
           <img className="profile-img" src={dp} alt="" />
         </div>
       </div>
-      <div className="tech-container">
-        <Tech />
+      <div className="skills-main">
+        <p
+          style={{
+            textAlign: "center",
+            color: "var(--secondary-color)",
+            fontSize: "1em",
+            fontWeight: "600",
+          }}
+        >
+          Skills
+        </p>
+        <p style={{ textAlign: "center", color: "var(--text-color-gray)" }}>
+          The skills, tools, and technologies I excel in
+        </p>
+        <div className="tech-container">
+          <Tech />
+        </div>
       </div>
     </>
   );

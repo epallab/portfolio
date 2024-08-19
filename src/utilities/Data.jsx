@@ -55,6 +55,11 @@ export const personalDetails = {
   name: "Pallab Biswas",
   role: "Fullstack Developer",
   tech: "MERN Stack",
+  introB: `Hello there! I'm Pallab Biswas, a passionate full stack developer 
+          specializing in creating dynamic and efficient web applications. With expertise
+         in technologies like JavaScript, React, Next.js, Node.js, and more, I bring a deep commitment 
+          to building seamless user experiences and powerful backend systems. From frontend design to backend 
+         architecture, I take pride in delivering top-notch solutions tailored to your needs.`,
 };
 
 export const skils = [

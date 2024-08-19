@@ -5,6 +5,7 @@ import "./buttons.css";
 const SecondaryBtn = (props) => {
   return (
     <button
+      onClick={props?.onClick}
       style={{
         padding: props?.padding,
         backgroundColor: props?.bgColor,
@@ -26,5 +27,6 @@ SecondaryBtn.propTypes = {
   color: PropTypes.string.isRequired,
   border: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 export default SecondaryBtn;
