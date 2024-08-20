@@ -3,6 +3,7 @@ import "./About.css";
 import "../home/Home.css";
 import dp from "../../assets/dp.png";
 import { personalDetails } from "../../utilities/Data";
+import Skills from "./Skills";
 
 const About = () => {
   return (
@@ -24,9 +25,10 @@ const About = () => {
         <h1 style={{ color: "var(--primary-color)", marginBottom: "20px" }}>
           on Full Stack Development
         </h1>
-        <p style={{ color: "var(--primary-color)" }}>
+        <p style={{ color: "var(--primary-color)", marginBottom: "10px" }}>
           {personalDetails?.introB}
         </p>
+        <Skills />
       </div>
     </div>
   );
