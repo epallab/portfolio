@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SkillRange from "./SkillRange";
 
 const Skills = () => {
   const [tab, setTab] = useState(1);
@@ -29,53 +30,21 @@ const Skills = () => {
         </button>
       </div>
       <div className="skills-details-container">
-        <div>
-          <label
-            style={{ color: "var(--primary-color)", fontWeight: 600 }}
-            htmlFor="mern"
-          >
-            MERN Stack
-          </label>
-          <input
-            className="skill-inp-range"
-            type="range"
-            name="mern"
-            id=""
-            min={1}
-            value={90}
-            max={100}
-          />
-          <label
-            style={{ color: "var(--primary-color)", fontWeight: 600 }}
-            htmlFor="mern"
-          >
-            React JS Frontend
-          </label>
-          <input
-            className="skill-inp-range"
-            type="range"
-            name="mern"
-            id=""
-            min={1}
-            value={96}
-            max={100}
-          />
-          <label
-            style={{ color: "var(--primary-color)", fontWeight: 600 }}
-            htmlFor="mern"
-          >
-            Node JS Backend
-          </label>
-          <input
-            className="skill-inp-range"
-            type="range"
-            name="mern"
-            id=""
-            min={1}
-            value={80}
-            max={100}
-          />
-        </div>
+        {tab === 1 && (
+          <div>
+            <SkillRange value={90} label={"MERN Stack"} id={"mern"} />
+            <SkillRange
+              value={96}
+              label={"React JS Frontend"}
+              id={"react-frontend"}
+            />
+            <SkillRange
+              value={80}
+              label={"Node JS Backend"}
+              id={"node-js-backend"}
+            />
+          </div>
+        )}
       </div>
     </>
   );
