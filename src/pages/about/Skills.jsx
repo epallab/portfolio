@@ -7,6 +7,7 @@ const Skills = () => {
   const handleClick = (id) => {
     setTab(id);
   };
+
   return (
     <>
       <div className="skills-btn-container">
